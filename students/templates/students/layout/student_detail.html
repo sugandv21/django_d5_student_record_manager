@@ -1,0 +1,13 @@
+{% extends "students/layout/base.html" %}
+{% block title %}Student Detail{% endblock %}
+
+{% block content %}
+<h2>Student Detail</h2>
+<div class="card p-4">
+  <p><strong>Name:</strong> {{ student.name }}</p>
+  <p><strong>Roll No:</strong> {{ student.roll_no }}</p>
+  <p><strong>Grade:</strong> {{ student.grade }}</p>
+  <p><strong>Active:</strong> {{ student.is_active|yesno:"Yes,No" }}</p>
+</div>
+<a href="{% url 'student_list' %}" class="btn btn-secondary mt-3">Back to List</a>
+{% endblock %}
